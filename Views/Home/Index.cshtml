@@ -1,0 +1,78 @@
+﻿@model Interesse
+
+@* PRIMEIRA PARTE DO CÓDIGO *@
+<div class="row">
+    <div class="col-md-6 ">
+        <h1>Iniciativa Saúde da Cidade</h1>
+        <p>
+            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at vix ad putent delectus delicata usu. Vidit dissentiet eos eum an brute copiosae hendrerit.
+        </p>
+        <p>
+            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="/img/woman-running.jpg" alt="woman running" width="800px">
+    </div>
+</div>
+
+
+@* SEGUNDA PARTE DO CÓDIGO *@
+
+<div class="row  mt-3">
+    <div class="col-md-6 border border-dark mb-3">
+        <h2>Entre em contato!</h2>
+        <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+
+        @* FORMULÁRIO *@
+        <form action="/Home/Cadastrar" method="POST">
+            <div class="row">
+                <div class="col-md-3">
+                    <label asp-for="Nome">Nome:</label>
+                </div>
+                <div class="col-md-9">
+                    <input asp-for="Nome" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"><label asp-for="Email">Email:</label></div>
+                <div class="col-md-9"><input asp-for="Email" /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"><label asp-for="Mensagem">Mensagem (opcional):</label></div>
+                <div class="col-md-9"><textarea asp-for="Mensagem"></textarea></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"><input type="submit" value="Enviar" class="mb-3" /></div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="row">
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="/img/calendar.png" alt="Agenda" class="figure-img img-fluid rounded" width="100px">
+                    <figcaption class="figure-caption text-right">Agenda de eventos</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="/img/tips.png" alt="Tips" class="figure-img img-fluid rounded" width="100px">
+                    <figcaption class="figure-caption text-right">Dicas de vida saudável</figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="/img/supporters.png" alt="Supporters" class="figure-img img-fluid rounded" width="100px">
+                    <figcaption class="figure-caption text-right">Apoiadores</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
